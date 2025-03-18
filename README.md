@@ -15,3 +15,15 @@ This is a playground for me to learn how to work with `pgvector`.
 	CREATE TABLE IF NOT EXISTS documents (id SERIAL PRIMARY KEY, content TEXT, embedding vector(1024));
 	```
 	Note: Dimension of the vector can be changed as per the requirement of precision we need.
+
+## Prepare Database
+
+- Inspect
+```sh
+atlas schema inspect --url "postgresql://postgres:postgres@localhost:5432/songs?sslmode=disable"
+```
+
+- Apply schema, you can approve or abort the changes:
+```sh
+atlas schema apply --url "postgresql://postgres:postgres@localhost:5432/songs?sslmode=disable" --to "file://migrations/schema.hcl"
+```
