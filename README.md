@@ -4,6 +4,11 @@
 
 This is a playground for me to learn how to work with `pgvector`.
 
+## Table of Contents
+- [pgvector](#pgvector)
+- [Prepare Database](#prepare-database)
+- [Possible Errors](#possible-errors)
+
 ## pgvector
 
 - Enable the extension:
@@ -27,3 +32,7 @@ atlas schema inspect --url "postgresql://postgres:postgres@localhost:5432/songs?
 ```sh
 atlas schema apply --url "postgresql://postgres:postgres@localhost:5432/songs?sslmode=disable" --to "file://migrations/schema.hcl"
 ```
+
+## Possible Errors
+
+If you've got an error like no import `psycopg`, you can try to install `libpq` and run `pip install "psycopg[binary]"`
