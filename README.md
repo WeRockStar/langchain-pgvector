@@ -42,3 +42,5 @@ atlas schema apply --url "postgresql://postgres:postgres@localhost:5432/songs?ss
 ## Possible Errors
 
 If you've got an error like no import `psycopg`, you can try to install `libpq` and run `uv pip install "psycopg[binary]"`
+
+Note: Read how to install `libpq` [here](https://docs.risingwave.com/deploy/install-psql-without-postgresql).
