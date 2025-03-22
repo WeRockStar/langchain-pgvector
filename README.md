@@ -4,6 +4,12 @@
 
 This is a playground for me to learn how to work with `pgvector`.
 
+## Prerequisites
+- [Docker](https://www.docker.com/)
+- [Python 3.10](https://www.python.org/) or use `pyenv` to install
+- [Atlas](https://atlasgo.dev/) for schema management
+- [uv](https://github.com/astral-sh/uv) for manage Python package
+
 ## Table of Contents
 - [pgvector](#pgvector)
 - [Prepare Database](#prepare-database)
@@ -35,4 +41,4 @@ atlas schema apply --url "postgresql://postgres:postgres@localhost:5432/songs?ss
 
 ## Possible Errors
 
-If you've got an error like no import `psycopg`, you can try to install `libpq` and run `pip install "psycopg[binary]"`
+If you've got an error like no import `psycopg`, you can try to install `libpq` and run `uv pip install "psycopg[binary]"`
