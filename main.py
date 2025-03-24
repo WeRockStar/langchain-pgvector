@@ -65,7 +65,7 @@ def search(queury: str) -> None:
         use_jsonb=True,
         logger=Logger(__name__),
     )
-    results = vector_store.similarity_search(query, k=2)
+    results = vector_store.similarity_search(queury, k=2)
     for result in results:
         print(result.page_content)
 
